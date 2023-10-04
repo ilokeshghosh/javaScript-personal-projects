@@ -1,1 +1,2 @@
-# project on javascript
+# Personal Project using vanilla javaScript
+<a href="https://brazen-mustang-8c5.notion.site/JavaScript-Personal-Project-5e4ba26c33b8472faeb7d10eff5ff928">![Notion](https://img.shields.io/badge/-Project_timeline-000?&style=for-the-badge&logo=notion&logoColor=1877F2)</a>
