@@ -12,9 +12,6 @@
     <style>
         body::-webkit-scrollbar {
             width: 10px;
-            background-color: transparent;
-            
-
         }
 
         body::-webkit-scrollbar-track {
@@ -33,7 +30,7 @@
             /* background-image: linear-gradient( 180.2deg,  rgba(30,33,48,1) 6.8%, rgba(74,98,110,1) 131% ); */
             /* background-image: url('https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); */
             /* background-image: url('../assets/back1.jpg'); */
-            /* background-image: url('../assets/back1.jpg'); */
+            /* background-image: url('../assets/back2.jpg'); */
 
 
             /* sort listed */
@@ -42,13 +39,31 @@
             /* background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%); */
             background-image: url('../assets/back4.jpg');
         }
+
+        .desc-container {
+            transition: all 0.5s ease;
+            height: 200px;
+            width: 420px;
+            border-radius: 12px;
+            position: relative;
+            top: 340px;
+            transform: rotate(-12deg) translateX(-2px);
+            backdrop-filter: blur(20px);
+
+        }
+
+        .desc-container.active {
+            top: 160px;
+
+
+        }
     </style>
 </head>
 
 <body class="overflow-x-hidden w-full flex justify-center items-center">
 
     <!-- container -->
-    <div id="container" class="w-screen  bg-fixed bg-no-repeat bg-center bg-cover">
+    <div id="container" class="w-screen pb-[10rem]  bg-fixed bg-no-repeat bg-center bg-cover">
         <!-- header container -->
         <div class="w-full  flex  justify-center items-start">
             <!-- header -->
@@ -63,7 +78,7 @@
                 <!-- text -->
                 <div class="md:w-[60%] w-full md:rotate-[5deg] p-2">
                     <!-- title -->
-                    <div class="text-center text-4xl font-extrabold text-white p-1">
+                    <div class="text-center text-4xl  font-extrabold text-white p-1">
                         <h1>Personal JavaScript Projects 🏗</h1>
                     </div>
 
@@ -81,72 +96,49 @@
             class="mt-5  mb-10 mx-auto flex-wrap md:w-[80%] w-full flex md:flex-row flex-col gap-7  justify-center items-center">
 
             <!-- card1  -->
-            <div
-                class="border backdrop-blur shadow-2xl shadow-green-900 md:w-[350px] w-[90%] h-[400px] rounded-xl flex flex-col justify-between items-center">
-                <!-- image -->
-                <div class="w-full h-[50%] rounded-xl"><img
-                        class="w-full transition-all linear duration-900 h-full rounded-xl hover:scale-110"
-                        src="../assets/day23.png" alt="random-image"></div>
+            <div id=""
+                class="card shadow-2xl shadow-green-900 md:w-[410px] w-[90%] h-[300px] rounded-xl flex flex-col justify-between items-center">
+                <!-- background - image -->
+                <div class="bg-img rounded-xl w-full h-[100%] overflow-hidden  bg-center bg-cover"
+                    style="background-image: url('../assets/day23.png');">
 
-                <!-- text -->
-                <div class="w-full flex flex-col justify-center items-center p-2 gap-4">
-                    <!--project title -->
-                    <div class="text-center text-3xl font-bold w-full text-white">
-                        <h1>Day-23: Speech Synthesis</h1>
+                    <!-- description -->
+                    <div id="" class="border-t  desc-container border-r flex flex-col gap-4 items-center rounded-xl ">
+
+
+                        <!-- links  -->
+                        <div class="w-full  rotate-12 flex items-end justify-items-start justify-center gap-0  p-2">
+                            <div class="w-1/3 flex justify-end items-center"><button
+                                    class="bg-slate-700 rounded-xl px-4 py-2 text-white"><a
+                                        href="https://github.com/ilokeshghosh/javascript-30/tree/main/23-Speech%20Synthesis"
+                                        target="_blank">GitHub</a></button></div>
+                            <div class="w-1/3 flex justify-end items-center"><button
+                                    class="bg-slate-700 rounded-xl px-4 py-2 text-white"><a
+                                        href="https://ilokeshghosh.github.io/javascript-30/23-Speech%20Synthesis/"
+                                        target="_blank">Live</a></button></div>
+                        </div>
+
+                        <!-- text  -->
+                        <div class="h-1/2 w-full flex flex-col items-start mx-auto ">
+                            <!-- project explanation -->
+                            <div class="text-center rotate-12 font-medium w-full text-[#016A70] pr-6 md:pr-0">
+                                <p>This project is built on HTML and JS</p>
+                            </div>
+                            <!--project title -->
+                            <div
+                                class="text-center rotate-12 md:text-3xl text-lg font-bold w-full text-[#053B50] pr-6 md:pr-0">
+                                <h1>Speech Synthesis</h1>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- project explanation -->
-                    <div class="text-center font-medium w-full text-white">
-                        <p>This project is built on HTML and JS</p>
-                    </div>
                 </div>
 
-                <!-- links  -->
-                <div class="w-full flex items-center justify-between p-2">
-                    <div class="w-1/3"><button class="bg-slate-700 rounded-xl px-4 py-2 text-white"><a
-                                href="https://github.com/ilokeshghosh/javascript-30/tree/main/23-Speech%20Synthesis"
-                                target="_blank">GitHub</a></button></div>
-                    <div class="w-1/3"><button class="bg-slate-700 rounded-xl px-4 py-2 text-white"><a href="#">Stack
-                                Blitz</a></button></div>
-                    <div class="w-1/3"><button class="bg-slate-700 rounded-xl px-4 py-2 text-white"><a
-                                href="https://ilokeshghosh.github.io/javascript-30/23-Speech%20Synthesis/"
-                                target="_blank">Live Demo</a></button></div>
-                </div>
+
             </div>
 
-
-            <!-- card2  -->
-            <div
-                class="backdrop-blur shadow-2xl shadow-green-900 md:w-[410px] w-[90%] h-[300px] rounded-xl flex flex-col justify-between items-center">
-                <!-- image -->
-                <div class="rounded-xl w-full h-full"><img class="rounded-xl w-full h-full" src="../assets/day23.png"
-                        alt=""></div>
-
-                <!-- text -->
-                <div id="text-container" class="hidden">
-                    <h1>Project title</h1>
-                </div>
-            </div>
-
-
-
-            <!-- card3  -->
-            <div
-                class="backdrop-blur overflow-hidden  shadow-2xl shadow-green-900 md:w-[410px] w-[90%] h-[300px] rounded-xl flex flex-col justify-between items-center">
-                <!-- image -->
-                <div class="rounded-xl w-full h-[100%] transition duration-1000 -z-10 bg-center bg-cover" style="background-image: url('../assets/day23.png');">
-
-                <!-- text -->
-                <div id="text-container" class="transition hidden duration-1000 hover:border-red-800 hover:border-4 border-t border-r  h-[200px] w-[420px] rounded-xl z-10 translate-y-[10rem]  -rotate-[12deg]	" 
-                style="background-image: linear-gradient(to top, #09203f 0%, #537895 100%);">
-                    <h1  class="rotate-12 text-right p-4 text-white">Project title</h1>
-                </div>
-            </div>
 
 
         </div>
-
-    </div>
 
 </body>
 <script src="script.js"></script>
