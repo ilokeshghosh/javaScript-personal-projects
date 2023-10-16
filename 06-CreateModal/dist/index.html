@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Modal</title>
+    <link rel="shortcut icon"
+    href="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+    type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-no-repeat bg-center bg-cover h-screen flex justify-center items-center"
+    style="background-image: url('https://images.unsplash.com/photo-1560707303-4e980ce876ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');">
+    <!-- wrapper -->
+    <div class="w-[400px] flex  font-bold h-[250px]   flex-col justify-center items-center gap-3  ">
+        <div
+            class="modal-card flex border-2  w-full h-full backdrop-blur-lg rounded-xl p-4    flex-col  justify-center items-center gap-3">
+            <h1 class="text-3xl text-white">Modal Project</h1>
+            <button
+                class="btn border-2 py-2 px-5 font-bold rounded-2xl text-white bg-black hover:text-black hover:bg-white">Open
+                Model</button>
+        </div>
+        <div
+            class="modal-content hidden border-2 bg-slate-700 p-4 md:w-[600px] md:h-[600px] rounded-xl z-10 relative top-0 left-0  justify-evenly items-center ">
+            <div class="p-2 text-center">
+                <h1 class="text-3xl text-white">Modal Content</h1>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolorum
+                    architecto cumque quis, delectus in dolore aspernatur iste rem! Illo!</p>
+            </div>
+            <span class="cross text-3xl text-red-600 h-full cursor-pointer">&Cross;</span>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
