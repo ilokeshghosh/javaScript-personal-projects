@@ -49,71 +49,216 @@
             color: red;
             background-color: rgb(92, 90, 90);
         }
+
+
+        .add-btn {
+            transition: all 0.3s linear;
+            padding-top: 4px;
+            padding-bottom: 6px;
+            padding-left: 13px;
+            padding-right: 13px;
+
+        }
+
+        .add-btn-active {
+            text-align: center;
+            border-radius: 50px;
+
+            color: red;
+            border: solid red;
+            background-color: black;
+            transform: rotate(45deg);
+        }
+
+        .add-btn-active:hover {
+            color: red;
+            background-color: rgb(92, 90, 90);
+        }
+
+        .add-question {
+            transition: max-width 0.2s linear, max-height 0.4s linear, transform 0.6s linear, opacity 0.6s linear;
+            max-width: 50px;
+            max-height: 0px;
+            z-index: 0;
+            transform: translateY(-30px);
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .add-question-active {
+            transition: max-width 0.6s linear, max-height 0.2s linear, transform 0.4s linear, opacity 0.4s linear;
+            max-width: 500px;
+            max-height: 500px;
+            transform: translateY(0px);
+            opacity: 1;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- wrapper -->
-    <div class="h-screen w-full py-[5rem] bg-no-repeat bg-center bg-cover flex flex-col justify-center gap-32 items-center"
+    <div class=" w-full py-[5rem] bg-no-repeat bg-center bg-cover flex flex-col justify-center gap-24 items-center"
         style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );">
 
         <!-- heading -->
-        <h1 class="w-full text-center text-white font-bold text-5xl   drop-shadow-2xl ">Frequently Asked Question</h1>
+
+        <div class="w-full flex flex-col justify-center items-center gap-5">
+            <h1 class="w-full text-center text-white font-bold text-5xl   drop-shadow-2xl ">Frequently Asked Question
+            </h1>
 
 
-        <!-- question-answer section -->
-        <div class="w-[80%] mx-auto flex flex-col gap-10 justify-center items-center">
 
-            <!-- Question-Answer 1 -->
-            <div class="md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+        </div>
+
+
+        <!-- question-answer wrapper  -->
+        <div class="qa-wrapper w-[80%] mx-auto flex flex-col gap-10 justify-center items-center">
+
+            <!-- Question-Answer 1 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
                 <!-- Question -->
                 <div
-                    class="bg-slate-600 rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
-                    <h2 class="text-xl font-bold text-left">Sample Question</h2>
+                    class="bg-[#04364A] rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">What is JavaScript, and why is it important in web
+                        development?</h2>
 
 
                     <span
-                        class="btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                        class="a btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
                 </div>
 
                 <!-- answer -->
-                <div class="answer rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-slate-400">
-                    <p class="text-white font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis ratione ipsam dignissimos commodi maiores nihil eos molestiae porro fugit neque
-                        excepturi expedita quia numquam incidunt nemo, ipsum consequuntur cumque officia omnis
-                        consectetur quam amet nobis quod. Vero maiores error iste maxime in quis totam obcaecati
-                        eligendi, autem, cupiditate aliquid ipsum, quo ratione ipsam? Nesciunt error autem illum sequi
-                        amet, dolores laudantium, cumque eum impedit sed, fuga quibusdam! Debitis maiores ea sit eum
-                        animi! Tempore, vitae quas deleniti non, facere neque corporis eaque qui sit eos in illo placeat
-                        ipsum dicta illum est, repellendus ipsam numquam quos alias. Neque, praesentium deserunt?</p>
+                <div class="answer   rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold ">JavaScript is a versatile programming language used for web
+                        development. It enables interactivity, dynamic content, and client-side scripting on web pages.
+                        JavaScript is vital because it makes web applications more engaging and user-friendly.</p>
                 </div>
             </div>
 
-            <!-- Question-Answer 2 -->
-            <div class="md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+            <!-- Question-Answer 2 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
                 <!-- Question -->
                 <div
-                    class="bg-slate-600 rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
-                    <h2 class="text-xl font-bold text-left">Sample Question</h2>
+                    class="bg-[#04364A]  rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">What's the difference between JavaScript and Java?</h2>
 
 
                     <span
-                        class="btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                        class="b btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
                 </div>
 
                 <!-- answer -->
-                <div class="answer rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-slate-400">
-                    <p class="text-white font-semibold ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Perferendis ratione ipsam dignissimos commodi maiores nihil eos molestiae porro fugit neque
-                        excepturi expedita quia numquam incidunt nemo, ipsum consequuntur cumque officia omnis
-                        consectetur quam amet nobis quod. Vero maiores error iste maxime in quis totam obcaecati
-                        eligendi, autem, cupiditate aliquid ipsum, quo ratione ipsam? Nesciunt error autem illum sequi
-                        amet, dolores laudantium, cumque eum impedit sed, fuga quibusdam! Debitis maiores ea sit eum
-                        animi! Tempore, vitae quas deleniti non, facere neque corporis eaque qui sit eos in illo placeat
-                        ipsum dicta illum est, repellendus ipsam numquam quos alias. Neque, praesentium deserunt?</p>
+                <div class="answer  rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold ">JavaScript and Java are entirely different languages. Java is a
+                        general-purpose programming language used for various applications, while JavaScript is a
+                        scripting language specifically used for web development.</p>
                 </div>
             </div>
+
+            <!-- Question-Answer 3 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+                <!-- Question -->
+                <div
+                    class="bg-[#04364A]  rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">How can I debug JavaScript code?</h2>
+
+
+                    <span
+                        class="b btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                </div>
+
+                <!-- answer -->
+                <div class="answer  rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold "> You can use browser developer tools (like the Chrome DevTools)
+                        to debug JavaScript. They provide features like breakpoints, step-through debugging, and console
+                        output to help you identify and fix issues in your code.</p>
+                </div>
+            </div>
+
+            <!-- Question-Answer 4 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+                <!-- Question -->
+                <div
+                    class="bg-[#04364A]  rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">How can I optimize the performance of my website using
+                        JavaScript?</h2>
+
+
+                    <span
+                        class="b btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                </div>
+
+                <!-- answer -->
+                <div class="answer  rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold ">Performance optimization techniques include minimizing and
+                        compressing JavaScript code, lazy loading assets, using a Content Delivery Network (CDN), and
+                        optimizing image sizes to reduce page load times.</p>
+                </div>
+            </div>
+
+            <!-- Question-Answer 5 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+                <!-- Question -->
+                <div
+                    class="bg-[#04364A]  rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">Is it necessary to learn JavaScript to become a web
+                        developer?</h2>
+
+
+                    <span
+                        class="b btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                </div>
+
+                <!-- answer -->
+                <div class="answer  rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold ">While it's not absolutely necessary, JavaScript is a
+                        fundamental skill for web development. Many modern web applications rely heavily on JavaScript
+                        for interactivity, and it's considered a core language for web development.</p>
+                </div>
+            </div>
+
+            <!-- Question-Answer 6 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+                <!-- Question -->
+                <div
+                    class="bg-[#04364A]  rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">What are the best practices for writing clean and
+                        maintainable JavaScript code?</h2>
+
+
+                    <span
+                        class="b btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                </div>
+
+                <!-- answer -->
+                <div class="answer  rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold ">Best practices include using meaningful variable and function
+                        names, following a style guide (e.g., Airbnb JavaScript Style Guide), breaking code into
+                        reusable functions, and commenting your code for clarity.</p>
+                </div>
+            </div>
+
+            <!-- Question-Answer 7 section-->
+            <div class="qa-sections md:w-[50%] w-full rounded-lg  flex flex-col justify-center items-center ">
+                <!-- Question -->
+                <div
+                    class="bg-[#04364A]  rounded-t-lg rounded-sm border-2  w-full flex px-6 py-2 justify-between items-center text-white z-10">
+                    <h2 class="text-xl font-bold text-left">What are some popular JavaScript libraries and tools?</h2>
+
+
+                    <span
+                        class="b btn border-2 cursor-pointer rounded-lg px-2  text-lg font-bold hover:bg-white hover:text-slate-600 ">&plus;</span>
+                </div>
+
+                <!-- answer -->
+                <div class="answer  rounded-b-lg w-full text-left overflow-hidden px-6 py-2 bg-[#176B87]">
+                    <p class="text-white font-semibold ">Popular JavaScript libraries and tools include jQuery, React,
+                        Angular, Vue.js (for front-end), Node.js (for server-side), Express.js (for web servers), and
+                        many more, depending on your specific needs./p>
+                </div>
+            </div>
+
         </div>
     </div>
 
