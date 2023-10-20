@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./dist/index.html'],
+  // content: ['./dist/*.html'],
+  content: ["./**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'custom-size': '1000px 800px', // Define your custom size here
+      },
+    },
   },
   plugins: [],
 }
