@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+        type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        @keyframes borderMove {
+            0% {
+                height: 0;
+                width: 50px;
+                top: 0%;
+                left: 0%
+            }
+
+
+            25% {
+                height: 5px;
+                width: 0px;
+                top: 0%;
+                left: 100%;
+            }
+
+            26% {
+                height: 50px;
+                width: 0px;
+            }
+
+            50% {
+                height: 0px;
+                width: 5px;
+                top: 100%;
+                left: 100%;
+            }
+
+            60% {
+                width: 50px;
+            }
+
+            75% {
+                height: 5px;
+                width: 0px;
+                top: 100%;
+                left: 0%;
+            }
+
+            95% {
+                height: 50px;
+                width: 0px;
+            }
+
+            100% {
+                height: 0;
+                width: 5px;
+                top: 0%;
+                left: 0%;
+            }
+        }
+
+        .animate-border-move {
+            animation: borderMove 4s linear infinite;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- page loader -->
+    <div class="loader-wrapper w-screen h-screen flex justify-center items-center  top-0 left-0 bg-slate-900 ">
+        <div
+            class="loader   before:bg-cyan-400 border-4 border-red-700 w-12 h-12 rounded-full border-t-blue-600 animate-spin">
+        </div>
+    </div>
+
+    <!-- wrapper -->
+    <div class="h-screen  overflow-y-hidden  relative top-0 left-0  justify-center items-center ">
+
+        <!-- video container -->
+        <div class="w-full h-full flex justify-center items-center  ">
+            <video class="video" src="../assets/video.mp4" loop></video>
+        </div>
+
+        <!-- content / control button container  -->
+        <div
+            class="absolute  top-0 text-white left-0 h-full w-full flex justify-center items-center flex-col bg-black/70">
+            <!-- content -->
+            <div class="text-center w-2/4 flex flex-col justify-center items-center gap-14">
+                <!-- heading -->
+                <div class="border-2 py-4 px-4   border-t-2 relative border-slate-500/20 ">
+                    <div
+                        class="spinner absolute top-0 left-1  rounded-full  z-10 border-slate-300 border-4  animate-border-move">
+                    </div>
+                    <h1 class="text-5xl font-bold ">Earth 🌍</h1>
+                </div>
+                <h4 class="text-xl font-semibold ">Earth is the third planet from the Sun in our solar system and the
+                    only known celestial body to support life as we know it. It is a fascinating and diverse planet with
+                    a wide range of natural features, ecosystems, and geological phenomena. </h4>
+            </div>
+
+            <!-- button -->
+            <div
+                class="-translate-x-[30rem] translate-y-[10rem] w-[40px] h-6 py-1 px-7 flex justify-center items-center rounded-full bg-white relative toggle-wrapper">
+                <input class="w-[40px] text-red-700 hidden" type="checkbox" name="" id="toggle">
+                <label
+                    class="toggle-btn flex justify-center items-center font-bold text-white text-sm   absolute top-0 w-6 h-6 left-[1px] bg-[#BEADFA] rounded-full cursor-pointer transition-all duration-300 ease-linear"
+                    for="toggle"><i class="fas fa-play "></i></label>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    <div>
+        <audio class="audio" src="../assets/bg-music.mp3" loop></audio>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
