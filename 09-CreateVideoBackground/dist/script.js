@@ -6,9 +6,32 @@ const audio= document.querySelector('.audio')
 const loader = document.querySelector(".loader-wrapper")
 
 
-document.addEventListener('DOMContentLoaded',()=>{
+// video.addEventListener('loadedmetadata',()=>{
+//     loader.style.display = 'none';
+//     video.style.display = "flex";
+//     video.play(); 
+// })
+
+// document.addEventListener('DOMContentLoaded',()=>{
+//     loader.style.display = 'none';
+// })
+
+
+
+
+// Function to hide the loader
+function hideLoader() {
     loader.style.display = 'none';
-})
+    video.style.display = 'flex';
+}
+
+// Check if video is ready to play
+if (video.readyState >= 2) {
+    hideLoader();
+} else {
+    video.addEventListener('canplay', hideLoader);
+}
+
 
 toggle_wrapper.addEventListener('change',(e)=>{
     if(toggle.checked){
@@ -20,8 +43,6 @@ toggle_wrapper.addEventListener('change',(e)=>{
         video.play();
         audio.play()
 
-        // console.log('checked');
-        // console.log(toggle_btn.classList);
     }else{
 
         toggle_btn.classList.remove('left-[35px]')
@@ -30,9 +51,6 @@ toggle_wrapper.addEventListener('change',(e)=>{
         toggle_wrapper.classList.remove('bg-[#DAFFFB]')
         video.pause();
         audio.pause();
-        // console.log('not checked');
-        // console.log(toggle_btn.classList);
     }
-    // console.log(toggle.checked === true);
 })
 
