@@ -19,7 +19,7 @@ document.querySelector('.copy-write').innerHTML = `Lokesh Ghosh &copy; ${new Dat
 document.addEventListener('scroll',()=>{
 
     // footer 
-    if(scrollY >= footer_div.offsetTop){
+    if(Math.ceil(scrollY) >= footer_div.offsetTop){
         footer.classList.add('bottom-0')
         footer.classList.remove('-bottom-40')
     }else{
