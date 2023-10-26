@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar On Scroll</title>
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgb(41, 40, 40);
+            border-radius: 1rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: white;
+            border-radius: 1rem;
+
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: grey;
+        }
+    </style>
+
+
+    <!-- style="background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% );" -->
+</head>
+
+<body class=" bg-no-repeat bg-center bg-cover bg-slate-400">
+
+
+
+
+    <!-- hero wrapper -->
+    <div id="home" class="h-screen hero flex flex-col items-center gap-10 ">
+        <!-- nav wrapper -->
+        <div
+            class="nav-wrapper py-4 w-full transition duration-700 ease-linear  h-[100px] flex justify-between items-center fixed top-0 left-auto">
+
+            <!-- nav for large screen -->
+            <nav class="text-white w-[80%] mx-auto md:flex hidden  justify-between px-4 items-center   h-[100px]   ">
+                <img class="w-[100px]"
+                    src="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+                    alt="logo">
+
+                <ul class="flex gap-10">
+                    <li class="font-bold text-lg"><a class="w-full" href="#about">About Us</a></li>
+                    <li class="font-bold text-lg"><a href="#portfolio">Portfolio</a></li>
+                    <li class="font-bold text-lg"><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- nav for small screen -->
+            <nav class="flex flex-col md:hidden w-[80%] mx-auto justify-between px-4  items-center  relative">
+                <!-- logo and hamburger-->
+                <div class="flex justify-between items-center  w-full ">
+                    <img class="w-[100px]"
+                        src="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+                        alt="logo">
+
+                    <span class="text-4xl text-white hamburger">&equiv;</span>
+                </div>
+
+                <!-- menu -->
+                <ul
+                    class="sd-nav-menu absolute border-slate-800 border-2 -top-32 transition-top duration-700 ease-linear  rounded-lg bg-slate-300 left-auto w-full flex items-center justify-center flex-col">
+                    <li
+                        class="font-bold rounded-lg text-lg border-slate-800 border-b-2 w-full text-center hover:bg-slate-500 hover:text-white">
+                        <a class="w-full" href="#about">About Us</a>
+                    </li>
+                    <li
+                        class="font-bold rounded-lg text-lg border-slate-800 border-b-2 w-full text-center hover:bg-slate-500 hover:text-white">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="font-bold rounded-lg text-lg  w-full text-center hover:bg-slate-500 hover:text-white">
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+
+
+        <!-- hero content -->
+        <div class="w-full mt-28">
+            <h1 class="text-white font-bold text-5xl text-center">Hero Content</h1>
+
+
+        </div>
+    </div>
+
+
+    <!-- scroll to top -->
+    <div
+        class="scroll-top transition-right  cursor-pointer duration-500 ease-linear  fixed bottom-20 -right-20 border-2 rounded-xl py-2 text-white px-2 hover:bg-white hover:text-slate-400">
+        <span class=" text-5xl"><a href="#home">&Uparrow;</a></span>
+    </div>
+
+
+    <!-- about us wrapper -->
+    <div id="about" class="h-screen border border-transparent">
+        <div class="w-full mt-28 brder">
+            <h1 class="text-white font-bold text-5xl text-center">About Us</h1>
+        </div>
+    </div>
+
+    <!-- portfolio wrapper -->
+    <div id="portfolio" class="h-screen border border-transparent">
+        <div class="w-full mt-28 brder">
+            <h1 class="text-white font-bold text-5xl text-center">Portfolio</h1>
+        </div>
+    </div>
+
+
+    <!-- contact wrapper -->
+    <div id="contact"
+        class="footer-section h-screen border border-transparent flex flex-col justify-between items-center overflow-y-hidden">
+        <div class="w-full mt-28 brder">
+            <h1 class="text-white font-bold text-5xl text-center">Contact Us</h1>
+        </div>
+
+        <!-- footer -->
+        <div
+            class="w-full footer transition-bottom delay-100 duration-700 ease-linear bg-slate-700 flex justify-center items-center relative -bottom-40  left-0 -z-10">
+            <footer class="w-[80%] py-4">
+                <!-- logo and menu -->
+                <div class="flex items-center justify-between px-4">
+                    <!-- logo -->
+                    <img class="w-[100px]"
+                        src="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+                        alt="logo">
+
+                    <ul class="flex gap-10 text-white">
+                        <li class="font-bold text-lg"><a class="w-full" href="#about">About Us</a></li>
+                        <li class="font-bold text-lg"><a class="w-full" href="#portfolio">Portfolio</a> </li>
+                        <li class="font-bold text-lg"> <a class="w-full" href="#contact">Contact Us</a> </li>
+                    </ul>
+                </div>
+
+                <!-- copywrite  text-->
+                <p class="text-slate-300 w-full text-center copy-write">Lokesh Ghosh &copy; 2020 All Right Reserved</p>
+
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
