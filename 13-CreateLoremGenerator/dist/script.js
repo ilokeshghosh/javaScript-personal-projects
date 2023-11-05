@@ -6,9 +6,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const size = parseInt(form.input.value);
     document.querySelector('.text-section').innerHTML = loremIpsum(size);
-    setTimeout(()=>{
-        form.input.value =''
-    },1000)
+   
 })
 
 
