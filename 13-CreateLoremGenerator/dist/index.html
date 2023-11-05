@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Lorem Ipsum generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/ilokeshghosh/RESOURCE_WAREHOUSE/main/profile%20images/octocat-1693317410462.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+ 
+<body class="bg-no-repeat bg-fixed h-screen  bg-cover  bg-center flex flex-col "
+    style="background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);">
+
+    <!-- wrapper -->
+    <div class="flex py-2    flex-col justify-start items-center  gap-10  md:w-[70%] w-full mx-auto">
+        <!-- title -->
+        <h1 class="text-blue-900 text-center text-4xl font-bold w-full">Generate Your Own Lorem Ipsum</h1>
+
+
+        <!-- bottom content -->
+        <div class="flex flex-col justify-center items-center gap-4 p-2">
+            <!-- form -->
+            <form class=" w-full flex justify-center items-center gap-3" id="form">
+                <label class="text-white font-bold " for="input">Sentence : </label>
+                <input class="rounded-lg  border w-[15%]  text-center outline-none focus:bg-blue-100" type="text" name="input" id="input">
+                <input class="border-2 px-4 py-2 border-white rounded-lg text-white font-bold text-lg" type="submit" value="Generate">
+            </form>
+
+            <!-- generated text wrapper -->
+            <div class="text-wrapper bg-slate-400 hidden flex-col items-start justify-center gap-2  w-[80%]  px-4 py-2 rounded-lg">
+              
+                <span class="w-full flex justify-end items-center"><i class="copy fa-solid fa-copy text-white hover:text-slate-500" ></i></span>
+               
+                <!-- text content -->
+                <div class="text-section">
+                    
+                </div>
+               
+               
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
