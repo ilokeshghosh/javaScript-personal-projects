@@ -10,8 +10,59 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .upperSection{
+        box-shadow: black 10px 10px 0px;
+      }
+      /* .startButton{
+      } */
+      .startButton:hover,.resetButton:hover,.stopButton:hover{
+        box-shadow: black 5px 5px 0px;
+
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-zinc-200">
+    <!-- wrapper -->
+    <div
+      class="w-[80%] mx-auto border flex flex-col my-[8rem] gap-5 justify-center items-center"
+    >
+      <!-- upper section -->
+      <div
+        class="upperSection border rounded text-center py-10 border-black md:w-[30%] w-[100%] bg-center bg-cover bg-no-repeat shadow-inner"
+        style="background-image: url('./bg-paper.png')"
+      >
+        <h2
+          class="w-full timeSection text-4xl text-cyan-400 selection:text-white selection:bg-cyan-400 font-bold"
+          style="font-family: cursive"
+        >
+          00:00:00:00
+        </h2>
+      </div>
+      <!-- bottom content -->
+      <div class="w-full flex border items-center justify-center gap-4">
+        <button
+          class="startButton border border-black rounded shadow-lg hover:shadow-2xl transition duration-400 hover:shadow-zinc-800 px-6 py-2 bg-no-repeat bg-center bg-cover font-bold text-black"
+          style="background-image: url('./button-vector2.png')"
+        >
+          Start
+        </button>
+
+        <button
+          class="resetButton border border-black rounded shadow-lg hover:shadow-2xl transition duration-400 hover:shadow-zinc-800 px-6 py-2 bg-no-repeat bg-center bg-cover font-bold text-black"
+          style="background-image: url('./button-vector2.png')"
+        >
+          Reset
+        </button>
+        <button
+          class="stopButton border border-black rounded shadow-lg hover:shadow-2xl transition duration-400 hover:shadow-zinc-800 px-6 py-2 bg-no-repeat bg-center bg-cover font-bold text-black"
+          style="background-image: url('./button-vector2.png')"
+        >
+          Stop
+        </button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
