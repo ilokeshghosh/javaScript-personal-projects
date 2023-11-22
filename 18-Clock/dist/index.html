@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock 🕐</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://ik.imagekit.io/8fgpvoiai/profile/octocat-1693317410462_d12-ZLppu.png?updatedAt=1700229684325"
+      type="image/x-icon"
+    />
+
+    <style>
+      @font-face {
+        font-family: "square";
+        src: url("./fonts/square_sans_serif_7.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "sevenSegment";
+        src: url("./fonts/Seven-Segment.ttf") format("truetype");
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: #606c88;
+      background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+      background: linear-gradient(to right, #3f4c6b, #606c88);
+    "
+  >
+    <!-- wrapper -->
+    <div
+      class="w-[80%] md:w-[60%] text-start md:text-center mx-auto my-[5rem] flex flex-col justify-center items-center gap-10"
+    >
+      <!-- upper section -->
+      <div class="w-full flex flex-col justify-center items-center gap-8">
+        <!-- heading -->
+        <h1
+          class="heading md:text-start text-center text-4xl tracking-wider mt-3 text-zinc-300 font-bold font-['square',sans-serif]"
+        >
+          Clock 🕐 using javaScript
+        </h1>
+
+        <!-- option buttons -->
+        <div class="w-full flex justify-center items-center gap-5">
+          <!-- !Analog Clock Button -->
+          <button
+            class="analog bg-zinc-600 text-white rounded-lg md:rounded-full px-4 py-2 border md:text-lg text-base font-semibold border-zinc-800"
+          >
+            Analog Clock
+          </button>
+
+          <!-- !Digital Clock Button -->
+          <button
+            class="digital bg-zinc-300 rounded-lg md:rounded-full px-4 py-2 border text-lg font-semibold border-zinc-800"
+          >
+            Digital Clock
+          </button>
+
+          <!-- !Neu Clock Button -->
+          <button
+            class="neu bg-zinc-300 rounded-lg md:rounded-full px-4 py-2 border text-lg font-semibold border-zinc-800"
+          >
+            Neu Clock
+          </button>
+        </div>
+      </div>
+
+      <!-- lower section -->
+      <div class="w-full flex flex-col justify-center items-center gap-1">
+        <!-- lower heading -->
+        <h2
+          class="clockHead text-3xl text-zinc-300 font-bold tracking-widest font-['square']"
+        >
+          Analog
+        </h2>
+
+        <!-- display container -->
+        <div class="w-full h-[380px] flex overflow-hidden">
+          <!-- !Analog Clock Container -->
+          <div
+            class="analog-container md:w-[80%] w-full mx-auto h-[310px] justify-center items-center flex"
+          >
+            <!-- outer circle -->
+            <div
+              class="md:w-[300px] w-full border-4 h-[300px] rounded-full flex justify-center items-center relative bg-zinc-900"
+            >
+              <!-- time labels -->
+              <div
+                class="font-bold text-white border-4 w-[250px] h-[250px] rounded-full flex items-center justify-between"
+              >
+                <span class="absolute top-[43%] right-[2%]">3</span>
+
+                <span class="absolute top-[92%] right-[48%]">6</span>
+
+                <span class="absolute top-[43%] right-[95%]">9</span>
+
+                <span class="absolute top-[0%] right-[48%]">12</span>
+              </div>
+
+              <!-- hands container -->
+              <div class="absolute w-full h-full rotate-180">
+                <!-- hour hand -->
+                <span
+                  class="hour absolute top-1/2 left-1/2 h-[70px] w-[0px] rounded-full border-[3px] origin-top"
+                ></span>
+
+                <!-- minute hand -->
+                <span
+                  class="minute absolute top-1/2 left-1/2 border-[2px] h-[80px] w-0 border-red-500 rounded-full origin-top"
+                ></span>
+
+                <!-- second hand -->
+                <span
+                  class="second absolute top-1/2 left-1/2 border-[1px] h-[100px] w-0 border-blue-600 rounded-full origin-top"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- !Digital Clock Container -->
+          <div
+            class="digital-container md:w-[80%] w-full mx-auto h-[310px] flex justify-center items-center hidden"
+          >
+            <!-- outer container -->
+            <div
+              class="h-full md:w-[90%] w-full border-4 border-zinc-300 bg-zinc-700 rounded-2xl flex justify-center items-center p-4"
+            >
+              <!-- inner container -->
+              <div class="w-full h-full border-4 rounded-2xl bg-zinc-950">
+                <!-- time container -->
+                <div
+                  class="w-full h-full border text-white flex justify-center items-center"
+                >
+                  <!--  font-['sevenSegment'] -->
+                  <p
+                    class="w-full text-center digitalClockContent md:text-9xl text-5xl font-['sevenSegment'] text-emerald-400 flex justify-center items-center md:gap-1"
+                  >
+                    00:00:00
+                    <sub class="md:text-6xl text-3xl md:w-[15%]">00</sub>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- !Neu Clock Container -->
+          <div
+            class="neu-container md:w-[80%] w-full mx-auto h-full flex flex-row-reverse md:gap-10 gap-2 justify-center items-center py-4 hidden"
+          >
+            <!-- !seconds section -->
+            <div class="flex md:gap-4 gap-1 justify-center items-center">
+              <!-- left seconds strap -->
+              <div
+                class="SecondsleftStrap flex justify-center items-center flex-col gap-2 border w-[40px] text-center transition-transform duration-500 ease-in-out rounded-lg md:text-xl text-lg font-bold text-white"
+              >
+                <span class="l0 l">0</span>
+                <span class="l1 l">1</span>
+                <span class="l2 l">2</span>
+                <span class="l3 l">3</span>
+                <span class="l4 l">4</span>
+                <span class="l5 l">5</span>
+              </div>
+
+              <!-- right seconds strap -->
+              <div
+                class="SecondsrightStrap flex flex-col justify-center transition-transform duration-500 ease-in-out items-center border w-[40px] text-center rounded-lg text-lg font-bold text-white"
+              >
+                <span class="r0 r">0</span>
+                <span class="r1 r">1</span>
+                <span class="r2 r">2</span>
+                <span class="r3 r">3</span>
+                <span class="r4 r">4</span>
+                <span class="r5 r">5</span>
+                <span class="r6 r">6</span>
+                <span class="r7 r">7</span>
+                <span class="r8 r">8</span>
+                <span class="r9 r">9</span>
+              </div>
+            </div>
+
+            <!-- !Minute Section -->
+            <div class="flex md:gap-4 gap-1 justify-center items-center">
+              <!-- left minute strap -->
+              <div
+                class="MinutesleftStrap flex justify-center items-center flex-col gap-2 border w-[40px] text-center transition-transform duration-500 ease-in-out rounded-lg text-xl font-bold text-white"
+              >
+                <span class="l0 l">0</span>
+                <span class="l1 l">1</span>
+                <span class="l2 l">2</span>
+                <span class="l3 l">3</span>
+                <span class="l4 l">4</span>
+                <span class="l5 l">5</span>
+              </div>
+
+              <!-- right minute strap -->
+              <div
+                class="MinutesrightStrap flex flex-col justify-center transition-transform duration-500 ease-in-out items-center border w-[40px] text-center rounded-lg text-lg font-bold text-white"
+              >
+                <span class="r0 r">0</span>
+                <span class="r1 r">1</span>
+                <span class="r2 r">2</span>
+                <span class="r3 r">3</span>
+                <span class="r4 r">4</span>
+                <span class="r5 r">5</span>
+                <span class="r6 r">6</span>
+                <span class="r7 r">7</span>
+                <span class="r8 r">8</span>
+                <span class="r9 r">9</span>
+              </div>
+            </div>
+
+            <!-- !Hour Section -->
+            <div class="flex md:gap-4 gap-1 justify-center items-center">
+              <!-- left hour strap -->
+              <div
+                class="HoursleftStrap flex justify-center items-center flex-col gap-2 border w-[40px] text-center transition-transform duration-500 ease-in-out rounded-lg text-xl font-bold text-white"
+              >
+                <span class="l0 l">0</span>
+                <span class="l1 l">1</span>
+                <span class="l2 l">2</span>
+              </div>
+
+              <!-- right hour strap -->
+              <div
+                class="HoursrightStrap flex flex-col justify-center transition-transform duration-500 ease-in-out items-center border w-[40px] text-center rounded-lg text-lg font-bold text-white"
+              >
+                <span class="r0 r">0</span>
+                <span class="r1 r">1</span>
+                <span class="r2 r">2</span>
+                <span class="r3 r">3</span>
+                <span class="r4 r">4</span>
+                <span class="r5 r">5</span>
+                <span class="r6 r">6</span>
+                <span class="r7 r">7</span>
+                <span class="r8 r">8</span>
+                <span class="r9 r">9</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
