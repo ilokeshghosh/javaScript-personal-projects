@@ -58,7 +58,7 @@ digitalButton.addEventListener('click', (e) => {
     analogButton.classList.remove('bg-zinc-600', 'text-white')
     analogButton.classList.add('bg-zinc-300', 'text-black')
     digitalButton.classList.add('bg-zinc-600', 'text-white')
-
+    neuButton.classList.remove('bg-zinc-600', 'text-white')
     digital_container.style.display = 'flex'
     analog_container.style.display = 'none'
     neu_container.style.display = 'none'
