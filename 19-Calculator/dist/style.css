@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -121,8 +121,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +133,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -568,6 +574,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -576,6 +586,30 @@ video {
 .my-\[5rem\] {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.my-\[\] {
+  margin-top: ;
+  margin-bottom: ;
+}
+
+.my-\[2\] {
+  margin-top: 2;
+  margin-bottom: 2;
+}
+
+.my-\[2rem\] {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-\[6rem\] {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.mt-\[6rem\] {
+  margin-top: 6rem;
 }
 
 .flex {
@@ -638,6 +672,10 @@ video {
 
 .overflow-scroll {
   overflow: scroll;
+}
+
+.text-clip {
+  text-overflow: clip;
 }
 
 .rounded-full {
@@ -731,6 +769,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -769,6 +812,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 
 .no-scrollbar::-webkit-scrollbar {
@@ -788,6 +836,16 @@ video {
   .md\:my-\[10rem\] {
     margin-top: 10rem;
     margin-bottom: 10rem;
+  }
+
+  .md\:my-\[6rem\] {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .md\:my-\[2rem\] {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .md\:w-\[25\%\] {

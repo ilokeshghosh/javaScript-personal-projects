@@ -18,9 +18,12 @@
   <body class="bg-slate-400 h-screen w-full flex justify-center items-center">
     <!-- wrapper -->
     <div class="md:w-[80%] w-[90%] h-full">
+      <p
+        class="error border h-10 w-full text-center mt-[6rem] font-bold text-red-600 text-xl"
+      ></p>
       <!-- calculator container -->
       <div
-        class="md:w-[25%] w-full mx-auto md:my-[10rem] my-[5rem] rounded-xl bg-[#1a1c1b]"
+        class="md:w-[25%] w-full mx-auto md:my-[3rem] my-[2rem] rounded-xl bg-[#1a1c1b]"
       >
         <!-- upper section -->
         <div class="h-[110px] p-2 bg-[#263532] rounded-xl">
@@ -28,7 +31,7 @@
           <div
             class="p-2 h-full flex justify-end items-center text-4xl font-bold text-white no-scrollbar overflow-scroll"
           >
-            <p class="output "></p>
+            <p class="output"></p>
             <p class="blinker font-thin animate-pulse text-[#81cfbd]">|</p>
           </div>
         </div>
@@ -40,22 +43,27 @@
             class="px-4 py-2 border-red-500 flex justify-between items-center"
           >
             <td
-              class="clear rounded-full cursor-pointer px-3 py-3 font-bold text-2xl text-center bg-[#124c6a] text-[#cfeffe]"
+              data-value="AC"
+              class="operator clear rounded-full cursor-pointer px-3 py-3 font-bold text-2xl text-center bg-[#124c6a] text-[#cfeffe]"
             >
               AC
             </td>
             <td
-              class="bracket rounded-full px-4 cursor-pointer py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+              data-value="DEL"
+              class="backSpace rounded-full cursor-pointer px-4 py-3 text-2xl font-bold text-center bg-[#124c6a] text-[#cfeffe]"
             >
-              ( )
+              CE
             </td>
+
             <td
-              class="mod rounded-full cursor-pointer px-4 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+              data-value="%"
+              class="operator mod rounded-full cursor-pointer px-4 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
             >
               %
             </td>
             <td
-              class="divide rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+              data-value="/"
+              class="operator divide rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
             >
               /
             </td>
@@ -64,22 +72,26 @@
           <!-- 2nd row -->
           <tr class="px-4 py-2 flex justify-between items-center">
             <td
+              data-value="7"
               class="seven rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               7
             </td>
             <td
+              data-value="8"
               class="eight rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               8
             </td>
             <td
+              data-value="9"
               class="nine rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               9
             </td>
             <td
-              class="multiply rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+              data-value="*"
+              class="operator multiply rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
             >
               X
             </td>
@@ -87,22 +99,26 @@
           <!-- 3rd row -->
           <tr class="px-4 py-2 flex justify-between items-center">
             <td
+              data-value="4"
               class="four rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               4
             </td>
             <td
+              data-value="5"
               class="five rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               5
             </td>
             <td
+              data-value="6"
               class="six rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               6
             </td>
             <td
-              class="subtract rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+              data-value="-"
+              class="operator subtract rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
             >
               -
             </td>
@@ -111,22 +127,26 @@
           <!-- 4th row -->
           <tr class="px-4 py-2 flex justify-between items-center">
             <td
+              data-value="1"
               class="one cursor-pointer rounded-full px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               1
             </td>
             <td
+              data-value="2"
               class="two cursor-pointer rounded-full px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               2
             </td>
             <td
+              data-value="3"
               class="three cursor-pointer rounded-full px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               3
             </td>
             <td
-              class="add rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+              data-value="+"
+              class="operator add rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
             >
               +
             </td>
@@ -135,22 +155,27 @@
           <!-- 5th row -->
           <tr class="px-4 py-2 flex justify-between items-center">
             <td
+              data-value="0"
               class="zero rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               0
             </td>
             <td
+              data-value="00"
+              class="operator bracket rounded-full px-4 cursor-pointer py-3 text-2xl font-bold text-center bg-[#334c46] text-[#cce7e0]"
+            >
+              00
+            </td>
+            <td
+              data-value="."
               class="dot rounded-full cursor-pointer px-5 py-2 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
             >
               .
             </td>
+
             <td
-              class="backSpace rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#1c2522] text-[#daf4eb]"
-            >
-              <i class="fa-solid fa-delete-left" style="color: #cce6dd"></i>
-            </td>
-            <td
-              class="equal rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#005043] text-[#8de7d6]"
+              data-value="="
+              class="operator equal rounded-full cursor-pointer px-5 py-3 text-2xl font-bold text-center bg-[#005043] text-[#8de7d6]"
             >
               =
             </td>
