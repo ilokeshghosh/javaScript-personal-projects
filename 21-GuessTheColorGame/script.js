@@ -52,7 +52,6 @@ function generateColor() {
                 answer_card.style.backgroundColor = color;
                 answer = color;
                 cardBox.appendChild(answer_card);
-                console.log(answer_place);
                 answer_card.addEventListener('click', () => checkColor(color))
                 continue;
             } else {
@@ -78,7 +77,6 @@ function generateColor() {
                 answer_card.style.backgroundColor = color;
                 answer = color;
                 cardBox.appendChild(answer_card);
-                console.log(answer_place);
                 answer_card.addEventListener('click', () => checkColor(color))
                 continue;
             } else {
